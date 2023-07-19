@@ -1,0 +1,26 @@
+[
+    [
+        "Color del botón",
+        "Modo oscuro",
+        "Ocultar porcentaje",
+        "Ocultar total",
+        "Créditos",
+        "BETA",
+        "Atrás  - (El único que sirve)"
+    ],
+    [
+        {
+            "darkColor" : "dark-Green",
+            "lightColor" : "light-Green"
+        },
+        {
+            "darkColor" : "dark-red",
+            "lightColor" : "light-red"
+        },
+        {
+            "darkColor" : "dark-blue",
+            "lightColor" : "light-blue"
+        }
+    ]
+    
+]

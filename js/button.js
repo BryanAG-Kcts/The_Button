@@ -1,26 +1,26 @@
 'use strict';
-import {$theButton, $theButtonBody, $showPercentaje, $maxValueFail} from "./main.js"
+import {$, $theButton, $theButtonBody, $showPercentaje, $maxValueFail} from "./main.js"
+
+const $maxValueButton = $('.maxValue');
 
 let valueButton = 0;
 let safePercentage = 100;
+let maxValueButton = 0;
 
 $theButton.addEventListener("mousedown", () => moveDown())
 $theButton.addEventListener("mouseup", () => moveUp())
-
 $theButton.addEventListener("touchstart", () => moveDown())
-$theButton.addEventListener("touchend", () => moveUp())
 
 window.addEventListener("keydown", (e) => {
-    if (e.key == "Enter") {
+    if (e.key == "Enter" || e.key == " ") {
         moveDown()
     }
 })
 window.addEventListener("keyup", (e) => {
-    if (e.key == "Enter") {
+    if (e.key == "Enter" || e.key == " ") {
         moveUp()
     }
 })
-
 
 function moveDown() {
     $theButtonBody.classList.add("top-0");
@@ -34,6 +34,9 @@ function moveUp() {
     valueButton = calculateError(valueButton)
     $theButtonBody.textContent = valueButton;
     $showPercentaje.textContent = safePercentage + '%'
+
+    const clickAudio = new Audio("./media/clickTheButton.mp3");
+    clickAudio.play();
 }
 
 function calculateError(val) {
@@ -43,9 +46,16 @@ function calculateError(val) {
         safePercentage = 100;
         $maxValueFail.innerHTML = /*Html*/ `
             El valor después del increíble fallo fue de
-
             <span class= "text-red-700 font-bold">${val}</span>
         `;
+
+        if (val > maxValueButton) {
+            maxValueButton = val;
+            $maxValueButton.innerHTML =  /*Html*/ `
+                Máximo alcanzado : 
+                <span class= "text-green-700 font-bold">${maxValueButton}</span>
+            `;
+        };
         return (0)
     };
 
