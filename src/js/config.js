@@ -1,9 +1,9 @@
-import {$, $mainDisplayGame} from "./main.js"
+import {$, $body, $mainDisplayGame, $showPercentaje, $maxValueButton, $maxValueFail} from "./main.js"
 
 const $userConfig = $('.userConfig');
 const $modalContainer = $('.modalContainer');
 const $modalConfig = $('.modalConfig');
-// const $modalConfigSub = $('.modalConfigSub');
+const $modalConfigSub = $('.modalConfigSub');
 
 async function infoConfig() {
     const infoModalConfig = await fetch("./appeal/config.txt")
@@ -32,17 +32,33 @@ function modalComponent(infoModal) {
     $modalConfig.insertAdjacentHTML("beforeend", template);
     const $$modalOptionsContainer = document.querySelectorAll(".modalOptionsContainer");
 
-    $$modalOptionsContainer[$$modalOptionsContainer.length - 1].addEventListener("click", () => toggleVisibleConfig())
+    //Modo oscuro
+    $$modalOptionsContainer[1].addEventListener("click", () => $body.classList.toggle("bodyDarkMode"))
+    //Ocultar - Mostrar Porcentaje
+    $$modalOptionsContainer[2].addEventListener("click", () => toggleVisibleElement($showPercentaje))
+
+    //Ocultar - Mostrar Máximo
+    $$modalOptionsContainer[3].addEventListener("click", () => toggleVisibleElement($maxValueButton))
+
+    //Ocultar - Mostrar fallo actual
+    $$modalOptionsContainer[4].addEventListener("click", () => toggleVisibleElement($maxValueFail))
+
+    //atrás
+    $$modalOptionsContainer[7].addEventListener("click", () => toggleVisibleConfig())
 }
 
 $userConfig.addEventListener("click", () => toggleVisibleConfig())
+
+function toggleVisibleElement($element) {
+    $element.classList.toggle("invisible");
+}
 
 function toggleVisibleConfig() {
     const clickAudio = new Audio("./media/pop.mp3");
     clickAudio.play();
 
     $modalContainer.classList.toggle("hidden");
-    $mainDisplayGame.classList.toggle("hidden")
+    $mainDisplayGame.classList.toggle("invisible")
 
     setTimeout(() => {
         $modalConfig.classList.toggle("scale-0")

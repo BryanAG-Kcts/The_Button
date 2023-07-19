@@ -1,0 +1,14 @@
+.bodyDarkMode {
+    background: var(--dark-Mode);
+    color: white;
+}
+.bodyDarkMode .theButton {
+    border-color: var(--dark-Gray);
+}
+
+.bodyDarkMode .modalContainer > div {
+    background: var(--dark-Mode);
+}
+.bodyDarkMode .modalContainer > div > div> span > span {
+    background: white;
+}

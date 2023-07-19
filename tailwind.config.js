@@ -6,6 +6,8 @@ module.exports = {
 
       colors : {
         "light-Beige" : "#fefae0",
+        "dark-Gray" : "#46494c",
+        "dark-Mode" : "#343434",
 
         "dark-Green" : "#008000",
         "light-Green" : "#38b000",
