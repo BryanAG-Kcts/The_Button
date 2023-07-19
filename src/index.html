@@ -5,27 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="css/root.css">
-    <title>The button</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>The - button</title>
 </head>
-<body class="relative h-screen bg-light-Beige flex justify-center items-center font-Quick font-semibold">
+<body class="relative h-screen bg-light-Beige flex flex-col justify-center items-center font-Quick font-semibold">
     
-    <div class="flex flex-col items-center gap-5 select-none">
+    <main class="mainGame">
 
-        <p class="showPercentaje text-2xl">100%</p>
+        <div class="flex flex-col items-center gap-5 select-none">
 
-        <span class="theButton relative h-52 w-52 border-[15px] rounded-full bg-dark-Green">
-            <span class="absolute h-full w-full rounded-full bg-light-Green -top-5 flex justify-center items-center text-5xl text-dark-Green duration-100">0</span>
-        </span>
+            <p class="maxValue"></p>
+            <p class="showPercentaje absolute top-0 left-0 m-4 text-2xl">100%</p>
+    
+            <span class="theButton relative h-52 w-52 border-[15px] rounded-full bg-dark-blue cursor-pointer">
+                <span class="absolute h-full w-full rounded-full bg-light-blue -top-5 flex justify-center items-center text-6xl text-dark-blue duration-100">0</span>
+            </span>
+    
+            <p class="maxValueFail text-center"></p>
+        </div>
+    
+        <div class="userConfig absolute top-0 right-0 m-4 w-14 h-14 flex justify-center items-center text-3xl border-4 border-gray-500 rounded-full pointer-events-none">
+            <i class="fa-solid fa-gear"></i>
+        </div>
 
-        <p class="maxValueFail text-center"></p>
+    </main>
 
-        <p class="text-center">
-            Recreando el maravilloso juego de Elendow..
-            <a class="text-blue-700" href="https://store.steampowered.com/app/1999740/THE_BUTTON_by_Elendow/">The Button</a>
-        </p>
+    <div class="modalContainer absolute hidden w-full max-w-[600px] p-5">
+
+        <div class="modalConfig scale-0 flex flex-col gap-5 bg-light-Beige border-8 rounded p-5 z-30 duration-150"></div>
+        <div class="modalConfigSub hidden bg-light-Beige border-8 p-3 z-50"></div>
 
     </div>
 
+    <p class="absolute text-center bottom-3 select-none">
+        Recreando el maravilloso juego de Elendow...
+        <a class="text-blue-700" href="https://store.steampowered.com/app/1999740/THE_BUTTON_by_Elendow/" target="_blank" rel = "noopenner noreferrer">The Button</a>
+    </p>
+
+
     <script src="js/button.js" type="module"></script>
+    <script src="js/config.js" type="module"></script>
+
+    <!-- creditos
+        Pixabay - Sonidos
+        FontAwesome - Iconos
+        Elendow - Las mecanicas y el estilo del juego
+    -->
 </body>
 </html>
