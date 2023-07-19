@@ -1,7 +1,5 @@
 'use strict';
-import {$, $theButton, $theButtonBody, $showPercentaje, $maxValueFail} from "./main.js"
-
-const $maxValueButton = $('.maxValue');
+import {$, $theButton, $theButtonBody, $showPercentaje, $maxValueFail, $musicButton, $maxValueButton} from "./main.js"
 
 let valueButton = 0;
 let safePercentage = 100;
@@ -56,9 +54,17 @@ function calculateError(val) {
                 <span class= "text-green-700 font-bold">${maxValueButton}</span>
             `;
         };
+
+        const errorButton = new Audio("./media/errorTheButton.mp3");
+        errorButton.play();
         return (0)
     };
 
     safePercentage-= 1;
     return(val+= 1)
 }
+
+window.addEventListener("click", () => {
+    $musicButton.volume = 0.2
+    $musicButton.play()
+});

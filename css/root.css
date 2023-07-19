@@ -1,5 +1,14 @@
+:root {
+  --dark-Mode : #343434;
+  --dark-Gray : #46494c;
+}
+
 .modalOptionsContainer > span:hover > span {
-    opacity: 100;
+  opacity: 100;
+}
+
+body, body * {
+  user-select: none;
 }
 
 @font-face {

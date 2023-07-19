@@ -1,12 +1,13 @@
 [
     [
         "Color del botón",
-        "Modo oscuro",
-        "Ocultar porcentaje",
-        "Ocultar total",
+        "Modo oscuro - ✔",
+        "Ocultar porcentaje - ✔",
+        "Ocultar total - ✔",
+        "Ocultar fallo - ✔",
+        "Tema",
         "Créditos",
-        "BETA",
-        "Atrás  - (El único que sirve)"
+        "Atrás - ✔"
     ],
     [
         {
