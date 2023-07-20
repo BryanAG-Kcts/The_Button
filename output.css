@@ -570,6 +570,18 @@ video {
   top: 0px;
 }
 
+.-bottom-10 {
+  bottom: -2.5rem;
+}
+
+.-bottom-96 {
+  bottom: -24rem;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -584,6 +596,10 @@ video {
 
 .m-4 {
   margin: 1rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
 }
 
 .flex {
@@ -818,11 +834,5 @@ video {
   .sm\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .md\:flex {
-    display: flex;
   }
 }

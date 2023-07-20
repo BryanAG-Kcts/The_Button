@@ -1,5 +1,6 @@
 'use strict';
-import {$, $theButton, $theButtonBody, $showPercentaje, $maxValueFail, $musicButton, $maxValueButton} from "./main.js"
+import {$theButton, $theButtonBody, $showPercentaje, $maxValueFail, $musicButton, $maxValueButton} from "./main.js"
+import { failTextButton } from "./messages.js";
 
 let valueButton = 0;
 let safePercentage = 100;
@@ -57,6 +58,7 @@ function calculateError(val) {
 
         const errorButton = new Audio("./media/errorTheButton.mp3");
         errorButton.play();
+        failTextButton()
         return (0)
     };
 
