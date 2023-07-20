@@ -570,6 +570,10 @@ video {
   top: 0px;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
 .z-30 {
   z-index: 30;
 }
@@ -586,8 +590,16 @@ video {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .hidden {
   display: none;
+}
+
+.h-10 {
+  height: 2.5rem;
 }
 
 .h-14 {
@@ -608,6 +620,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.w-10 {
+  width: 2.5rem;
 }
 
 .w-14 {
@@ -656,6 +672,10 @@ video {
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .items-center {
   align-items: center;
 }
@@ -696,6 +716,21 @@ video {
   border-width: 15px;
 }
 
+.border-dark-Blue {
+  --tw-border-opacity: 1;
+  border-color: rgb(94 96 206 / var(--tw-border-opacity));
+}
+
+.border-dark-Green {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 128 0 / var(--tw-border-opacity));
+}
+
+.border-dark-Red {
+  --tw-border-opacity: 1;
+  border-color: rgb(164 22 26 / var(--tw-border-opacity));
+}
+
 .border-gray-500 {
   --tw-border-opacity: 1;
   border-color: rgb(107 114 128 / var(--tw-border-opacity));
@@ -706,7 +741,17 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-dark-red {
+.bg-dark-Blue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(94 96 206 / var(--tw-bg-opacity));
+}
+
+.bg-dark-Green {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 128 0 / var(--tw-bg-opacity));
+}
+
+.bg-dark-Red {
   --tw-bg-opacity: 1;
   background-color: rgb(164 22 26 / var(--tw-bg-opacity));
 }
@@ -716,7 +761,17 @@ video {
   background-color: rgb(254 250 224 / var(--tw-bg-opacity));
 }
 
-.bg-light-red {
+.bg-light-Blue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(83 144 217 / var(--tw-bg-opacity));
+}
+
+.bg-light-Green {
+  --tw-bg-opacity: 1;
+  background-color: rgb(56 176 0 / var(--tw-bg-opacity));
+}
+
+.bg-light-Red {
   --tw-bg-opacity: 1;
   background-color: rgb(229 56 59 / var(--tw-bg-opacity));
 }
@@ -768,11 +823,6 @@ video {
 .text-blue-700 {
   --tw-text-opacity: 1;
   color: rgb(29 78 216 / var(--tw-text-opacity));
-}
-
-.text-dark-red {
-  --tw-text-opacity: 1;
-  color: rgb(164 22 26 / var(--tw-text-opacity));
 }
 
 .text-green-700 {

@@ -5,22 +5,49 @@
         "Ocultar porcentaje - ✔",
         "Ocultar total - ✔",
         "Ocultar fallo - ✔",
-        "Tema",
         "Créditos",
         "Atrás - ✔"
     ],
     [
         {
-            "darkColor" : "dark-Green",
-            "lightColor" : "light-Green"
+            "darkColor" : "--dark-Green",
+            "lightColor" : "--light-Green"
         },
         {
-            "darkColor" : "dark-red",
-            "lightColor" : "light-red"
+            "darkColor" : "--dark-Red",
+            "lightColor" : "--light-Red"
         },
         {
-            "darkColor" : "dark-blue",
-            "lightColor" : "light-blue"
+            "darkColor" : "--dark-Blue",
+            "lightColor" : "--light-Blue"
+        },
+        {
+            "darkColor" : "--dark-Yellow",
+            "lightColor" : "--light-Yellow"
+        },
+        {
+            "darkColor" : "--dark-Orange",
+            "lightColor" : "--light-Orange"
+        },
+        {
+            "darkColor" : "--dark-Violet",
+            "lightColor" : "--light-Violet"
+        },
+        {
+            "darkColor" : "--dark-Turquoise",
+            "lightColor" : "--light-Turquoise"
+        },
+        {
+            "darkColor" : "--dark-Bronze",
+            "lightColor" : "--light-Bronze"
+        },
+        {
+            "darkColor" : "--dark-Silver",
+            "lightColor" : "--light-Silver"
+        },
+        {
+            "darkColor" : "--dark-Gold",
+            "lightColor" : "--light-Gold"
         }
     ]
     
