@@ -1,10 +1,13 @@
-import {$, $body, $mainDisplayGame, $showPercentaje, $maxValueButton, $maxValueFail, $theButton, $theButtonBody} from "./main.js"
+'use strict';
+import {$, $body, $mainDisplayGame, $showPercentaje, $maxValueButton, $maxValueFail, $theButton} from "./main.js"
 
 const $userConfig = $('.userConfig');
 const $modalContainer = $('.modalContainer');
 const $modalConfig = $('.modalConfig');
 const $modalConfigSubGrid = $('.modalConfigSubGrid');
 const $modalConfigSubFlex = $('.modalConfigSubFlex');
+
+let $$modalConfigSelector;
 
 async function infoConfig() {
     const infoModalConfig = await fetch("./appeal/config.txt")
@@ -23,7 +26,7 @@ function modalComponent(infoModal) {
         
             <div class="modalOptionsContainer flex justify-between text-sm sm:text-base select-none">
                 <span class="flex gap-4 items-center">
-                    <span class="h-2 w-2 rounded-full bg-black opacity-0 duration-100"></span>
+                    <span class="modalSelector h-2 w-2 rounded-full bg-black opacity-0 duration-100"></span>
                     <p class="cursor-pointer">${infoModal[0][i]}</p>
                 </span>
             </div>
@@ -32,6 +35,13 @@ function modalComponent(infoModal) {
 
     $modalConfig.insertAdjacentHTML("beforeend", template);
     const $$modalOptionsContainer = document.querySelectorAll(".modalOptionsContainer");
+    $$modalConfigSelector = document.querySelectorAll('.modalSelector');
+
+    for (let i = 0; i < $$modalOptionsContainer.length - 1; i++) {
+        $$modalOptionsContainer[i].addEventListener("click", () => $$modalConfigSelector[i].classList.toggle("modalSelectorActive"))
+    }
+
+    
 
     //Colores del botón
     $$modalOptionsContainer[0].addEventListener("click", () => buttonColorOptions(infoModal[1]))
@@ -65,6 +75,7 @@ function buttonColorOptions(colorObject) {
         `
     }
 
+    displaySelector($$modalConfigSelector, true)
     smoothGrid(template, true);
     
     setTimeout(() => {
@@ -101,7 +112,19 @@ function showCredits(credits) {
         `
     }
 
+    displaySelector($$modalConfigSelector, false)
     smoothGrid(template, false);
+}
+
+function displaySelector(modalSelector, boolean) {
+
+    if(boolean) {
+        modalSelector[0].classList.add("modalSelectorActive");
+        modalSelector[5].classList.remove("modalSelectorActive")
+    }else {
+        modalSelector[0].classList.remove("modalSelectorActive");
+        modalSelector[5].classList.add("modalSelectorActive")
+    }
 }
 
 function smoothGrid(template, boolean) {

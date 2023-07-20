@@ -17,16 +17,19 @@
     
     <main class="mainGame">
 
+        <p class="showPercentaje absolute top-0 left-0 m-4 text-2xl">100%</p>
+
         <div class="flex flex-col items-center gap-5 select-none">
 
             <p class="maxValue"></p>
-            <p class="showPercentaje absolute top-0 left-0 m-4 text-2xl">100%</p>
     
             <span class="theButton relative h-52 w-52 border-[15px] rounded-full">
                 <span class="absolute h-full w-full rounded-full -top-5 flex justify-center items-center text-6xl duration-100">0</span>
             </span>
     
             <p class="maxValueFail text-center"></p>
+
+            <h1 class="messagesText hidden text-3xl mt-10 text-center"></h1>
         </div>
     
         <div class="userConfig absolute top-0 right-0 m-4 w-14 h-14 flex justify-center items-center text-3xl border-4 border-gray-500 rounded-full pointer-events-none">

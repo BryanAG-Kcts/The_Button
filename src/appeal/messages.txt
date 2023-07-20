@@ -1,0 +1,28 @@
+[
+    [
+        "Omaga",
+        "Sigue presionando, ¿por qué no?",
+        "Talvez falles ahora",
+        "BUTTON",
+        "KACTUSWOW",
+        "KACTUSWOW KACTUSWOW KACTUSWOW KACTUSWOW KACTUSWOW KACTUSWOW KACTUSWOW KACTUSWOW KACTUSWOW",
+        "XD",
+        "¡El destino llama! Click en el botón",
+        "Un clic puede cambiarlo todo.",
+        "¿Valiente o estúpido? Tu clic lo decidirá.",
+        "El enigmático botón frente a ti es un misterio envuelto en incertidumbre. ¿Podría desencadenar una agradable sorpresa o un estallido impredecible? Cautivado por la tentación del riesgo, tu mano se acerca, pero la duda te asalta. ¿Será valiente tu clic o te rendirás ante la intriga? - Gpt",
+        "DEBO.. PRESIONAR.. EL BOTÓN!!!! * tu ahora mismo *"
+    ],
+    [
+        "Ni modo",
+        "Creo que perdiste tus puntos :c",
+        "Se daño el juego",
+        "¿Crees en las posibilidades?",
+        "No te tocaba",
+        "Bueno, sigue presionando",
+        "XDn't",
+        "El botón hizo una jugada inesperada. Has sido superado por su misterio",
+        "El baile del botón",
+        "*Te derrota épicamente*"
+    ]
+]

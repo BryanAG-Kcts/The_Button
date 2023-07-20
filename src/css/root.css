@@ -33,13 +33,29 @@
   --light-Gold: radial-gradient(at center center, rgb(254, 240, 138), rgb(250, 204, 21), rgb(161, 98, 7));
 }
 
-.modalOptionsContainer > span:hover > span {
+.modalOptionsContainer > span:hover > .modalSelector {
   opacity: 100;
+}
+
+.modalSelectorActive {
+  opacity: 1;
 }
 
 body,
 body * {
   user-select: none;
+}
+
+.messagesText {
+  filter: blur(3px);
+  opacity: 0;
+  scale: 0;
+  transition: all .3s;
+}
+.messagesTextActive {
+  filter: blur(0);
+  opacity: 1;
+  scale: 1;
 }
 
 .theButton {
