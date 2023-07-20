@@ -35,12 +35,11 @@
 
     </main>
 
-    <!-- Agregarle flex column a esta cagada que queda bastante bien -v -->
-    <div class="modalContainer absolute hidden flex-col gap-5 w-full max-w-[600px] p-5">
+    <div class="modalContainer absolute hidden flex-col gap-5 w-full max-w-[600px] p-5 max-h-[80vh] overflow-y-auto">
 
         <div class="modalConfig scale-0 flex flex-col gap-5 bg-light-Beige border-8 rounded p-5 z-30 duration-150"></div>
         <div class="modalConfigSubGrid grid bg-light-Beige border-8 p-3 z-50">
-            <div class="modalConfigSubFlex flex flex-wrap justify-center gap-5"></div>
+            <div class="modalConfigSubFlex flex  justify-center gap-5 overflow-y-auto duration-150"></div>
         </div>
 
     </div>
@@ -50,16 +49,8 @@
         <a class="text-blue-700" href="https://store.steampowered.com/app/1999740/THE_BUTTON_by_Elendow/" target="_blank" rel = "noopenner noreferrer">The Button</a>
     </p>
 
-    <audio class="musicButton" src="media/track-1-vlog-night-street.mp3" loop></audio>
-
-    <!-- <span class="bg-light-Green bg-light-Red bg-light-Blue bg-dark-Green bg-dark-Red bg-dark-Blue border-dark-Green border-dark-Red border-dark-Blue"></span> -->
+    <audio class="musicButton" src="./media/track-1-vlog-night-street.mp3" loop></audio>
     <script src="js/button.js" type="module"></script>
     <script src="js/config.js" type="module"></script>
-
-    <!-- creditos
-        Pixabay - Sonidos
-        FontAwesome - Iconos
-        Elendow - Las mecanicas y el estilo del juego
-    -->
 </body>
 </html>
