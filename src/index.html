@@ -22,8 +22,8 @@
             <p class="maxValue"></p>
             <p class="showPercentaje absolute top-0 left-0 m-4 text-2xl">100%</p>
     
-            <span class="theButton relative h-52 w-52 border-[15px] rounded-full bg-dark-red">
-                <span class="absolute h-full w-full rounded-full bg-light-red -top-5 flex justify-center items-center text-6xl text-dark-red duration-100">0</span>
+            <span class="theButton relative h-52 w-52 border-[15px] rounded-full">
+                <span class="absolute h-full w-full rounded-full -top-5 flex justify-center items-center text-6xl duration-100">0</span>
             </span>
     
             <p class="maxValueFail text-center"></p>
@@ -35,10 +35,13 @@
 
     </main>
 
-    <div class="modalContainer absolute hidden w-full max-w-[600px] p-5">
+    <!-- Agregarle flex column a esta cagada que queda bastante bien -v -->
+    <div class="modalContainer absolute hidden flex-col gap-5 w-full max-w-[600px] p-5">
 
         <div class="modalConfig scale-0 flex flex-col gap-5 bg-light-Beige border-8 rounded p-5 z-30 duration-150"></div>
-        <div class="modalConfigSub hidden bg-light-Beige border-8 p-3 z-50"></div>
+        <div class="modalConfigSubGrid grid bg-light-Beige border-8 p-3 z-50">
+            <div class="modalConfigSubFlex flex flex-wrap justify-center gap-5"></div>
+        </div>
 
     </div>
 
@@ -47,9 +50,9 @@
         <a class="text-blue-700" href="https://store.steampowered.com/app/1999740/THE_BUTTON_by_Elendow/" target="_blank" rel = "noopenner noreferrer">The Button</a>
     </p>
 
-    <audio class="musicButton" src="media/Track-1-vlog-night-street.mp3" loop></audio>
+    <audio class="musicButton" src="media/track-1-vlog-night-street.mp3" loop></audio>
 
-
+    <!-- <span class="bg-light-Green bg-light-Red bg-light-Blue bg-dark-Green bg-dark-Red bg-dark-Blue border-dark-Green border-dark-Red border-dark-Blue"></span> -->
     <script src="js/button.js" type="module"></script>
     <script src="js/config.js" type="module"></script>
 

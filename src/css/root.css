@@ -1,14 +1,56 @@
 :root {
-  --dark-Mode : #343434;
-  --dark-Gray : #46494c;
+  --dark-Mode: #343434;
+  --dark-Gray: #46494c;
+
+  --dark-Green: #008000;
+  --light-Green: #38b000;
+
+  --dark-Red: #a4161a;
+  --light-Red: #e5383b;
+
+  --dark-Blue: #5e60ce;
+  --light-Blue: #5390d9;
+
+  --dark-Yellow: #ffc300;
+  --light-Yellow: #ffea00;
+
+  --dark-Orange: #e85d04;
+  --light-Orange: #f48c06;
+
+  --dark-Violet: #560bad;
+  --light-Violet: #7209b7;
+
+  --dark-Turquoise: #00b4d8;
+  --light-Turquoise: #48cae4;
+
+  --dark-Bronze: #bc6c25;
+  --light-Bronze: radial-gradient(at center center, rgb(234, 179, 8), rgb(202, 138, 4), rgb(153, 27, 27));
+
+  --dark-Silver: #666666;
+  --light-Silver: radial-gradient(at center center, rgb(181, 183, 187), rgb(55, 57, 61));
+
+  --dark-Gold: #ffa200;
+  --light-Gold: radial-gradient(at center center, rgb(254, 240, 138), rgb(250, 204, 21), rgb(161, 98, 7));
 }
 
 .modalOptionsContainer > span:hover > span {
   opacity: 100;
 }
 
-body, body * {
+body,
+body * {
   user-select: none;
+}
+
+.theButton {
+  --base-Color: var(--dark-Green);
+  --body-Color: var(--light-Green);
+
+  color: var(--base-Color);
+  background: var(--base-Color);
+}
+.theButton > span {
+  background: var(--body-Color);
 }
 
 @font-face {

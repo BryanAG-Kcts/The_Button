@@ -11,10 +11,10 @@ module.exports = {
 
         "dark-Green" : "#008000",
         "light-Green" : "#38b000",
-        "dark-red" : "#a4161a",
-        "light-red" : "#e5383b",
-        "dark-blue" : "#5e60ce",
-        "light-blue" : "#5390d9"
+        "dark-Red" : "#a4161a",
+        "light-Red" : "#e5383b",
+        "dark-Blue" : "#5e60ce",
+        "light-Blue" : "#5390d9"
       },
       fontFamily : {
         "Quick" : ["Quick", "sans-serif"],
