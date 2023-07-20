@@ -53,6 +53,12 @@ body * {
   background: var(--body-Color);
 }
 
+.modalConfigSubGrid {
+  display: grid;
+  transition: all 0.3s;
+  grid-template-rows: var(--grid-Row, 0fr);
+}
+
 @font-face {
   font-family: "Quick";
   src: url(../fonts/Quicksand_wght.ttf);

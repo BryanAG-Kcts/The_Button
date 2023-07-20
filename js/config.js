@@ -34,9 +34,7 @@ function modalComponent(infoModal) {
     const $$modalOptionsContainer = document.querySelectorAll(".modalOptionsContainer");
 
     //Colores del botón
-    $$modalOptionsContainer[0].addEventListener("click", () => {
-        buttonColorOptions(infoModal[1])
-    })
+    $$modalOptionsContainer[0].addEventListener("click", () => buttonColorOptions(infoModal[1]))
     //Modo oscuro
     $$modalOptionsContainer[1].addEventListener("click", () => $body.classList.toggle("bodyDarkMode"))
     //Ocultar - Mostrar Porcentaje
@@ -47,6 +45,9 @@ function modalComponent(infoModal) {
 
     //Ocultar - Mostrar fallo actual
     $$modalOptionsContainer[4].addEventListener("click", () => toggleVisibleElement($maxValueFail))
+
+    //Créditos
+    $$modalOptionsContainer[5].addEventListener("click", () => showCredits(infoModal[2]))
 
     //atrás
     $$modalOptionsContainer[6].addEventListener("click", () => toggleVisibleConfig())
@@ -64,12 +65,15 @@ function buttonColorOptions(colorObject) {
         `
     }
 
-    $modalConfigSubFlex.innerHTML = template;
-    const $$colorButtonOptions = document.querySelectorAll('.colorButtonOptions');
-
-    for (let i = 0; i < $$colorButtonOptions.length; i++) {
-        $$colorButtonOptions[i].addEventListener("click", () => buttonChangeColor(colorObject[i]))
-    }
+    smoothGrid(template, true);
+    
+    setTimeout(() => {
+        const $$colorButtonOptions = document.querySelectorAll('.colorButtonOptions');
+        for (let i = 0; i < $$colorButtonOptions.length; i++) {
+            $$colorButtonOptions[i].addEventListener("click", () => buttonChangeColor(colorObject[i]))
+        }
+    }, 310);
+    
 }
 
 function buttonChangeColor(colorButton) {
@@ -82,6 +86,42 @@ function buttonChangeColor(colorButton) {
 
 function toggleVisibleElement($element) {
     $element.classList.toggle("invisible");
+}
+
+function showCredits(credits) {
+    let template = "";
+
+    for (let i = 0; i < credits.length; i++) {
+        template += /*html*/ `
+        
+            <a class="sm:flex justify-between" href="${credits[i].link}" rel="noopenner noreferrer" target="_blank">
+                ${credits[i].name} :
+                <p class="text-blue-700">${credits[i].desc}</p>
+            </a>
+        `
+    }
+
+    smoothGrid(template, false);
+}
+
+function smoothGrid(template, boolean) {
+    $modalConfigSubGrid.style.removeProperty("--grid-Row");
+
+    setTimeout(()=> {
+        
+        if(boolean) {
+            $modalConfigSubFlex.classList.remove("flex-col");
+            $modalConfigSubFlex.classList.add("flex-wrap");
+
+        }else {
+            $modalConfigSubFlex.classList.add("flex-col");
+            $modalConfigSubFlex.classList.remove("flex-wrap");
+
+        }
+
+        $modalConfigSubFlex.innerHTML = template;
+        $modalConfigSubGrid.style.setProperty("--grid-Row", "1fr");
+    }, 310)
 }
 
 function toggleVisibleConfig() {
